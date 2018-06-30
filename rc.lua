@@ -10,11 +10,11 @@
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
 
-local variables     = require("variables")
-local myawesomemenu = require("myawesomemenu")
-local bindings      = require("bindings")
-local layout        = require("layout")
-local autostart     = require("autostart")
+local variables     = require("configs.variables")
+local myawesomemenu = require("configs.myawesomemenu")
+local bindings      = require("configs.bindings")
+local layout        = require("configs.layout")
+local autostart     = require("configs.autostart")
 
 local gears         = require("gears")
 local awful         = require("awful")
@@ -51,12 +51,12 @@ end
 -- }}}
 
 -- {{{ Autostart windowless processes
-run_once({ "killall unclutter",
-	   "unclutter -idle 5",
-	   "nm-applet",
-	   "synapse",
+run_once({ "killall unclutter",	-- kill unclutter that keeps loading from god knows where
+	   "unclutter -idle 5",	
+	   "nm-applet",		-- network applet
+	   "synapse",		
 	   "urxvtd",
-	   "xinput disable 11",
+	   "xinput disable 'SynPS/2 Synaptics TouchPad'",
 	   "compton --opengl --vsync opengl-swc --paint-on-overlay &",
 	   "~/.config/awesome/locker.sh"}) -- entries must be comma-separated
 -- }}}

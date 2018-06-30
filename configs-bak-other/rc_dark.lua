@@ -1,0 +1,1 @@
+/home/ubuntu/kvantum/powerarrow-dark/awesome/rc.lua

@@ -1,0 +1,2 @@
+ps aux | sort -rn -k 3 | head -n 1 | awk '{print $11}' | awk -F/ '{print $NF}'
+

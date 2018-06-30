@@ -1,0 +1,3 @@
+#!/bin/bash
+import -window root ~/screenshots/"$(date +%Y%m%d_%H%M%S).png"
+notify-send -t 2000 -- 'screenshotted'
